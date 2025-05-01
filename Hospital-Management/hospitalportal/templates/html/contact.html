@@ -1,0 +1,58 @@
+{% extends 'html/base.html' %}
+{% block title %}contact{% endblock %}
+{% block content %}
+
+<div class="container mt-2">
+  <div class="jumbotron">
+    <center>
+    <h3 style="color: blue;">Welcome to contact page</h3>
+  
+  
+  <body>
+    <h1 style="color: green;">Contact Us</h1>
+    <p style="color: red;">Feel free to get in touch with us using the form below:</p>
+
+    <form action="submit_form.php" method="POST">
+      <label for="name" style="color: purple;">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email" style="color: purple;">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="message" style="color: purple;">Message:</label><br>
+      <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+      <input type="submit" value="Submit" style="background-color: orange; color: white;">
+    </form>
+  </body>
+  </center>
+
+  <div class="container mt-2">
+    <div class="jumbotron">
+      <div class="col-md-5">
+        <div class="contact-address">
+          <h1 style="color: blue;">Contact Information:</h1>
+          <ul>
+            <li>
+              <span class="icon"><i class="fa fa-hospital-o" aria-hidden="true"></i></span>
+              <span class="add-text" style="color: green;">NG palli, Madanapalli<br> Clocksbuilding,<br> Bharath</span>
+            </li>
+            <li>
+              <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+              <span class="add-text" style="color: red;">+196302365622<br> +199456789567</span>
+            </li>
+            <li>
+              <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+              <span class="add-text" style="color: purple;"><strong>For Inquiry:</strong> MITShospitals.com</span>
+            </li>
+            <li>
+              <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+              <span class="add-text" style="color: orange;"><strong>For Details:</strong> www.mitshospitals.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #2a2a45);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        #contact {
+            align-content: center;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #f39c12;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #e67e22;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        section p,
+        section ul {
+            font-size: 1rem;
+            margin: 10px auto;
+            max-width: 800px;
+            text-align: center; /* Center the description text */
+        }
+
+        section ul {
+            list-style-type: disc;
+            padding-left: 0; /* Remove default padding */
+        }
+
+        section ul li {
+            text-align: left; /* Align text to left within the list item */
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .project-card {
+            width: 300px;
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        section#con {
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .project-card h3 {
+            padding: 15px;
+            font-size: 1.2rem;
+        }
+
+        .project-card p {
+            padding: 0 15px 15px;
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Profile Picture */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            margin-right: 20px;
+        }
+
+        /* Go to Top Button */
+        .go-to-top {
+            position: fixed;
+            bottom: 20px; /* Position the button at the bottom of the screen */
+            right: 20px;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .go-to-top:hover {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <!-- Profile Picture -->
+            <img src="/Users/somasekhar/Desktop/portfolio/21691A2879.jpeg" alt="Profile Picture" class="profile-img">
+            <h1>Portfolio</h1>
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#internships">Internships</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my projects, skills, and achievements.</p>
+    </div>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate and dedicated developer with experience in web development, full-stack development. I enjoy solving complex problems, creating intuitive user experiences, and building scalable, efficient systems.</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>Madanapalle Institute of Technology and Science, Madanapalle, India</strong><br>Bachelor of Technology (B.Tech) in Computer Science and Technology (2021 - 2025)<br>CGPA: 7.5/10</li>
+            <li><strong>Sri Sai Siddhatha Jr College, Madanapalle, India</strong><br>Intermediate (MPC) (2019 - 2021)<br>Percentage: 83%</li>
+            <li><strong>Vivekananda High School, Madanapalle, India</strong><br>Secondary School Certificate (SSC) (2018 - 2019)<br>CGPA: 9.2/10</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <a href="https://github.com/Lokesh-g12321/hospital-management-system" target="_blank" class="project-card">
+                <h3>Hospital Management System</h3>
+                <p>May 2023 - July 2023<br>Technologies: Python, JavaScript, HTML, CSS<br>• Designed and implemented an online appointment scheduling system with detailed doctor profiles using HTML, CSS, and JavaScript, enhancing the ease of use for patients and staff.<br>• Ensured responsive design for desktop and mobile views and established cross-browser compatibility, improving accessibility and user experience across devices.<br>• Utilized JavaScript for frontend validation and interactivity, contributing to a seamless, error-free user interface.</p>
+            </a>
+            <a href="https://github.com/Lokesh-g12321/Online-Clothing-Store" target="_blank" class="project-card">
+                <h3>Online Clothing Store</h3>
+                <p>June 2024 - August 2024<br>Technologies: JavaScript, TypeScript, Angular, HTML, CSS<br>• Built order and payment pages using Angular with HTML, CSS, and TypeScript to create a smooth and responsive user experience, prioritizing UI/UX design and usability.<br>• Collaborated closely with backend developers to integrate RESTful APIs, optimizing application performance and loading speed.<br>• Improved application responsiveness and cross-browser compatibility to ensure a consistent and high-quality user experience across devices.</p>
+            </a>
+        </div>
+    </section>
+    
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Programming Languages:</strong> Java, JavaScript, TypeScript</li>
+            <li><strong>Web Technologies:</strong> HTML, CSS, Angular, Django, Bootstrap</li>
+            <li><strong>Frontend Skills:</strong> Responsive Design, UI/UX Design, Cross-browser Compatibility</li>
+            <li><strong>Version Control:</strong> Git, GitHub</li>
+            <li><strong>Prototyping Tools:</strong> Figma</li>
+            <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
+            <li><strong>Operating Systems:</strong> Windows, Linux, macOS</li>
+        </ul>
+    </section>
+
+    <section id="internships">
+        <h2>Internships</h2>
+        <ul>
+            <li><strong>Web Development Intern</strong><br>APSSDC (Remote) | May 2023 - July 2023<br>• Developed a hospital management system using Django for backend functionality and HTML/CSS for a user-friendly frontend.<br>• Enhanced UI design and ensured mobile responsiveness, achieving high user satisfaction.<br>• Implemented JavaScript for front-end validation and interactive features, contributing to a smooth user experience.</li>
+            <li><strong>Frontend Development Intern</strong><br>Xenovex Pvt. Ltd. | June 2024 - August 2024<br>• Built an e-commerce web application using Angular with a focus on UI/UX improvements to boost engagement and usability.<br>• Leveraged TypeScript for enhanced performance and reliability, optimizing for faster load times.<br>• Gained expertise in responsive design and cross-browser compatibility, improving the application’s accessibility across various devices and platforms.</li>
+        </ul>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Certifications in C, Python, SQL | HackerRank</li>
+            <li>Responsive Web Design Developer Certification | FreeCodeCamp, 2022</li>
+            <li>Certificate in Object-Oriented Programming using Java | Great Learning, 2023</li>
+            <li>Explorer Badge in Java Programming | Oracle, 2024<br>Learned Java programming basics, including variables, classes, objects, loops, arrays, and decision constructs. Gained an introduction to Java's object-oriented capabilities using the NetBeans IDE and Oracle Cloud.</li>
+        </ul>
+    </section>
+
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Winner of First Prize in Environthon at Rangutsav’24, Feb 2024</li>
+            <li>First Prize in "Ideas to Achieve SDG" Competition, Sep 2023</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <section id="con">
+            <p>Email: <a href="mailto:lokesh.g12321@gmail.com">lokesh.g12321@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/lokesh-g-9b2b2b219" target="_blank">linkedin.com/in/lokesh-g-9b2b2b219</a></p>
+            <p>GitHub: <a href="https://github.com/Lokesh-g12321" target="_blank">github.com/Lokesh-g12321</a></p>
+        </section>
+    </section>
+
+    <footer>
+        <p>© 2025 My Portfolio | Designed with ♥</p>
+    </footer>
+
+    <!-- Go to Top Button -->
+    <button class="go-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Show or hide the "Go to Top" button based on scroll position
+        window.onscroll = function () {
+            const button = document.querySelector('.go-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        };
+
+        // Scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+
+</html>

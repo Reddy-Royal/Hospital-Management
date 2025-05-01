@@ -1,0 +1,25 @@
+{% extends 'html/base.html' %}
+{% block title %}signup{% endblock %}
+{% block content %}
+<div class="container mt-4">
+	<div class="card col-md-4 mx-auto shodow-lg border-success">
+		<div class="card-body">
+			<h4>Sign up</h4>
+			<form method="post">
+				{% csrf_token %}
+				{% for i in t %}
+					{{i}}
+				{% endfor %}
+				<div class="row">
+					<div class="col">
+						<a href="{% url 'lg'%}" class="btn btn-warning form-control">Sign in</a>
+					</div>
+					<div class="col">
+						<input type="submit" value="Sign up" class="btn btn-success form-control">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}
